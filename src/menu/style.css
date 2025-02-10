@@ -1,0 +1,101 @@
+/* Estilos gerais */
+body {
+    font-family: sans-serif;
+    background-color: grey;
+    margin: 0;
+}
+
+.space {
+    height: 40px;
+}
+
+/* Menu lateral */
+.dashboard {
+    background-color: #111827;
+    color: white;
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.dashboard.closed {
+    transform: translateX(-100%);
+}
+
+.dashboard.open {
+    transform: translateX(0);
+}
+
+.dashboard h2 {
+    text-align: center;
+}
+
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard ul li {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dashboard a {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.dashboard a:hover {
+    color: #3b82f6;
+}
+
+/* Conteúdo principal */
+.view {
+    margin-left: 150px;
+    /* Margem igual à largura do menu */
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.dashboard.closed+.view {
+    margin-left: 0;
+}
+
+/* Botão de menu */
+.menu-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dashboard {
+        width: 100px;
+    }
+
+    .view {
+        margin-left: 0;
+    }
+
+    .dashboard.closed+.view {
+        margin-left: 0;
+    }
+}
