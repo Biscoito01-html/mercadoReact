@@ -7,5 +7,5 @@ export interface Produto {
     categoria: string;
     quantidade: number;
 
-    onClick: () => void
+    onClick?: () => void
 }

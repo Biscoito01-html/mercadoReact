@@ -1,5 +1,6 @@
-import { Produto } from '../interface/produto';
-import "./style.css"
+import { Produto } from "../../interface/produto";
+
+
 
 const List = (props: Produto) => {
     return (

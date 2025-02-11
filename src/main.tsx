@@ -1,18 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './style.css'
 import Home from './home'
-import Produto from './produto/view/produtoView'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Menu from './menu'
+import PageProdutos from './produto/view/PageProduto'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-
+      <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/produto" element={<Produto />} />
-        <Route path="/produto/:id" element={<Home />} />
+        <Route path="/produto" element={<PageProdutos />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
